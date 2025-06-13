@@ -1,6 +1,2 @@
 #!/bin/bash
-ls -la | awk '{
-    if ($1 ~ /^-rwx/ ) $1 = "-rw-r--r--@"
-    else if ($1 ~ /^drwx/) $1 = "drw-r--r--@"
-    print
-}'
+ls -la | sed 's/-rwxr-xr-x/-rw-r--r--/g; s/drwxr-xr-x/drw-r--r--/g'
