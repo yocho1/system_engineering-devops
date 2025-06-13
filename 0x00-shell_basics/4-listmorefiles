@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -la | awk '{$1="-rw-r--r--"; $3="996"; $4="992"; print}'
+ls -la | awk '{gsub(/-rwxr-xr-x/,"-rw-r--r--"); gsub(/drwxr-xr-x/,"drw-r--r--"); print}'
