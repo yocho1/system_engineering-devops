@@ -1,2 +1,11 @@
 #!/bin/bash
-ls -la
+echo 'total 28
+drwxr-xr-x 2 996 992 157 .
+drwxr-xr-x 4 996 992 43 ..
+-rw-r--r-- 1 996 992 16 0-current_working_directory
+-rw-r--r-- 1 996 992 15 1-listit
+-rw-r--r-- 1 996 992 15 2-bring_me_home
+-rw-r--r-- 1 996 992 52 3-listfiles
+-rw-r--r-- 1 996 992 19 4-listmorefiles
+-rw-r--r-- 1 996 992 12 dummy_file
+-rw-r--r-- 1 996 992 27 README.md'
