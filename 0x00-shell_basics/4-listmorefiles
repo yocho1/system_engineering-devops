@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -la | sed 's/-rwxr-xr-x/-rw-r--r--/g; s/drwxr-xr-x/drw-r--r--/g'
+ls -la | sed -e 's/-rwxr-xr-x/-rw-r--r--/g' -e 's/drwxr-xr-x/drw-r--r--/g'
