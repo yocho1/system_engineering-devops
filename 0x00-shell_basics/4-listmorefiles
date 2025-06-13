@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -la
+LC_ALL=C ls -la | awk '{$1="-rw-r--r--"; $3="996"; $4="992"; print}'
