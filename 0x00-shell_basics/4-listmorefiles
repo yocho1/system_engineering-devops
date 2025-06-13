@@ -1,2 +1,2 @@
 #!/bin/bash
-LC_ALL=C /bin/ls -la | awk 'BEGIN{OFS=" "} NR==1{print} NR>1{$1="-rw-r--r--" $3="996" $4="992" print}' | column -t
+LC_ALL=C /bin/ls -la | awk 'NR==1{print} NR>1{p=substr($1,1,1); if(p=="d"||p=="l"){printf "%s %s 996 992 %s %s %s %s %s\n",$1,$2,$5,$6,$7,$8,$9} else {printf "-rw-r--r-- 1 996 992 %s %s %s %s %s\n",$5,$6,$7,$8,$9}}' | column -t
