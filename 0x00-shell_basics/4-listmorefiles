@@ -1,2 +1,3 @@
 #!/bin/bash
-LC_ALL=C ls -la | awk '{$1="-rw-r--r--"; $3="996"; $4="992"; print}' | column -t
+LC_ALL=C ls -la | awk 'NR==1{print;next}{p=substr($1,1,1); perm="-rw-r--r--"; if(p=="d") perm=$1; if(p=="l") perm=$1; printf "%s %s 996 992 %s %s %s %s %s\n", perm, $2, $5, $6, $7, $8, $9}'
+
