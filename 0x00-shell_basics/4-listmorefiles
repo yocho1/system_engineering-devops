@@ -1,2 +1,2 @@
-#!/bin/bash
-LC_ALL=C /bin/ls -lah | awk '{sub(/[0-9]+/,996,$3);sub(/[0-9]+/,992,$4)}1'
+LC_ALL=C /bin/ls -l 4-listmorefiles
+exit 0
