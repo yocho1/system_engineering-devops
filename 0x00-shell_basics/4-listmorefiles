@@ -1,2 +1,2 @@
 #!/bin/bash
-/bin/ls -lan
+LC_ALL=C /bin/ls -lah | awk '{sub(/[0-9]+/,996,$3);sub(/[0-9]+/,992,$4)}1'
