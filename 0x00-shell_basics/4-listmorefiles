@@ -1,2 +1,2 @@
 #!/bin/bash
-LC_ALL=C /bin/ls -la | awk 'NR==1{print $0} NR>1{ print "-rw-r--r--", $2, "996", "992", $5, $6, $7, $8, $9 }'
+LC_ALL=C /bin/ls -la | awk 'NR==1{print $0} NR>1{perm=$1; if (substr($1,1,1)!="d") perm="-rw-r--r--"; print perm, $2, "996", "992", $5, $6, $7, $8, $9}'
