@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l | sed 's/-rwxr-xr-x/-rw-r--r--/g'
+ls -l
