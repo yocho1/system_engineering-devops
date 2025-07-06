@@ -1,0 +1,4 @@
+#!/bin/bash
+clean_path=$(echo "$PATH" | tr -s ':')
+count=$(echo "$clean_path" | awk -F: '{print NF}')
+echo "$count"
