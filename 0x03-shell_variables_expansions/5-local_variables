@@ -1,2 +1,2 @@
 #!/bin/bash
-export -p | grep -oP "(?<=declare -x )[^\=]+" | while read var; do printf "%s=%s\n" "$var" "${!var}"; done
+while read l; do echo "${l#declare -x }" | tr -d '"' ; done < <(export -p)
