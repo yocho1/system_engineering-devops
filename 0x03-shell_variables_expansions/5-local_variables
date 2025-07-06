@@ -1,2 +1,2 @@
 #!/bin/bash
-export -p | cut -d" " -f3-
+export -p | sed -E 's/^declare -x ([^=]+)="?(.*)"?$/\1=\2/'
