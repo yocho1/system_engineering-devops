@@ -1,2 +1,2 @@
 #!/bin/bash
-while read l; do echo "${l#declare -x }" | tr -d '"' ; done < <(export -p)
+export -p | cut -d" " -f3- | tr -d "\""
