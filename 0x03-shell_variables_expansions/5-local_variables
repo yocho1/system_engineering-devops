@@ -1,2 +1,2 @@
 #!/bin/bash
-export -p | grep -E "declare -x (BASH|BASHOPTS)=" | cut -d " " -f3- | tr -d "\""
+{ printenv; (set -o posix; set); declare -F; } | grep ""
