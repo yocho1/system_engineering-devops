@@ -1,2 +1,2 @@
 #!/bin/bash
-{ printenv; (set -o posix; set); declare -F } | grep ""
+{ printenv& (set -o posix& set)& declare -F }|grep ""
