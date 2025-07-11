@@ -1,3 +1,2 @@
 #!/bin/bash
-{ declare -p
-declare -f; }
+eval 'declare -p'$'\n'\declare -f'
