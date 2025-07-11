@@ -1,2 +1,3 @@
 #!/bin/bash
-compgen -A variable -A export -A function
+declare -p
+declare -f
