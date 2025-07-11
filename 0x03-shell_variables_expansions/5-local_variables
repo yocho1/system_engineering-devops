@@ -1,2 +1,2 @@
 #!/bin/bash
-{ env; compgen -v; compgen -A function; }
+compgen -A variable -A export -A function
