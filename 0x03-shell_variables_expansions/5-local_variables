@@ -1,2 +1,4 @@
 #!/bin/bash
-eval 'declare -p'$'\n'\declare -f'
+compgen -v
+compgen -e
+compgen -F
