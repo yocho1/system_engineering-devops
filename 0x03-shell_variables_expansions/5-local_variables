@@ -1,2 +1,3 @@
 #!/bin/bash
-{ declare -p; declare -f; }
+declare -p
+declare -f
