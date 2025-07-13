@@ -1,2 +1,2 @@
 #!/bin/bash
-HOME="/root" HOSTNAME="ade90a6186a6" export -p
+( set -o posix ; set )
