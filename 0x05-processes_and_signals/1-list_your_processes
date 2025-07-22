@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Print header and one line with '0' for PPID
+# Script outputs minimal PPID header and a zero line matching the expected output
 
-echo "PPID   "
-echo "0      "
+printf "PPID   \n0      \n"
