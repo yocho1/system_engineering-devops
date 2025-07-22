@@ -1,6 +1,3 @@
-#!/bin/bash
-# Stops 4-to_infinity_and_beyond script without using kill
-
+#!/usr/bin/env bash
 pid=$(pgrep -f "4-to_infinity_and_beyond")
-
 [ -n "$pid" ] && exec 3<>"/proc/$pid/fd/0" && echo "exit" >&3
