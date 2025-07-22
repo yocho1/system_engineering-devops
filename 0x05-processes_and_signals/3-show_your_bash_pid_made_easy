@@ -2,6 +2,6 @@
 # shellcheck disable=SC2009
 
 for pid in $(pgrep bash); do
-    cmd=$(readlink -f /proc/$pid/exe 2>/dev/null || echo "unknown")
+    cmd=$(readlink -f /proc/"$pid"/exe 2>/dev/null || echo "unknown")
     echo "$pid $cmd"
 done
