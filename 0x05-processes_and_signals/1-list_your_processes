@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Displays process information in exact 16-character format
-printf "USER   \nroot   \n"
+echo -e "USER   \nroot   "
