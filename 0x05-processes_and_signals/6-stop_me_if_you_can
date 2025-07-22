@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# This script stops the "4-to_infinity_and_beyond" process by sending "exit"
 pid=$(pgrep -f "4-to_infinity_and_beyond")
 [ -n "$pid" ] && exec 3<>"/proc/$pid/fd/0" && echo "exit" >&3
