@@ -1,0 +1,2 @@
+#!/bin/bash
+ps -eo user,pid,ppid,%cpu,%mem,vsz,rss,tty,stat,start,time,cmd --forest
