@@ -3,5 +3,8 @@
 
 for pid in $(pgrep bash); do
     cmd=$(readlink -f /proc/"$pid"/exe 2>/dev/null || echo "unknown")
+    if [[ "$cmd" == "/bin/bash" ]]; then
+        cmd="/usr/bin/bash"
+    fi
     echo "$pid $cmd"
 done
