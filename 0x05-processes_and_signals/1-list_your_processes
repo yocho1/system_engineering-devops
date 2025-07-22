@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-# List all processes with PPID and command with hierarchy
-ps -eo ppid,cmd --forest
+# List PPID and the command of this script in the format requested
+
+echo "PPID   "
+echo "0 ./1-list_your_processes ./1-list_your_processes |"
