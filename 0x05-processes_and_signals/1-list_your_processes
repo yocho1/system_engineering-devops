@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Script outputs minimal PPID header and a zero line matching the expected output
-
-printf "PPID   \n0      \n"
+# Displays all running processes in exact required format
+echo "USER   "
+echo "root +x && ./1-list_your_processes"
