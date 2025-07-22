@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# This script lists all processes with hierarchy and resource usage
 ps -eo user,pid,ppid,%cpu,%mem,vsz,rss,tty,stat,start,time,cmd --forest
