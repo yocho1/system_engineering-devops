@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script lists processes containing "bash" from the full process tree
 # shellcheck disable=SC2009
-ps -eo user=,stat=,time=,cmd= --forest | grep bash
+ps -eo user=,pid=,stat=,time=,cmd= --forest | grep bash
