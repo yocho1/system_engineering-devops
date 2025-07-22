@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-# Stops all 4-to_infinity_and_beyond processes without kill or killall, outputs number stopped
+# Stops all 4-to_infinity_and_beyond processes without kill or killall silently
 
-count=0
 for pid in $(pgrep -f 4-to_infinity_and_beyond); do
   if [ -e /proc/"$pid"/fd/0 ]; then
-    exec 3<>/proc/"$pid"/fd/0 && echo "exit" >&3 && count=$((count+1))
+    exec 3<>/proc/"$pid"/fd/0 && echo "exit" >&3
   fi
 done
-echo "$count"
