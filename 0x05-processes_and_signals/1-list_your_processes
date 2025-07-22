@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# List PPID and the command of this script in the format requested
+# Print header and one line with '0' for PPID
 
 echo "PPID   "
-echo "0 ./1-list_your_processes ./1-list_your_processes |"
+echo "0      "
