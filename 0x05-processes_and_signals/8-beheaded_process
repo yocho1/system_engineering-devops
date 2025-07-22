@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Kill all 7-highlander processes with SIGKILL signal (signal 9)
+pids=$(pgrep -f "7-highlander")
+for pid in $pids; do
+  kill -9 "$pid"
+done
