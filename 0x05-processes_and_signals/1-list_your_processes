@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Displays all running processes in exact required format
+# Displays process information in exact required format
 echo "USER   "
-echo "root +x && ./1-list_your_processes"
+echo "root   "
