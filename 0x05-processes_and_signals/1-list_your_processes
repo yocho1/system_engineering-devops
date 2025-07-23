@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Displays process information in exact 16-character format
-echo -e "USER   \nroot   "
+# Display only USER column of all running processes, unique and sorted
+ps -eo user= | sort | uniq | awk 'BEGIN {print "USER"} {print $1}'
