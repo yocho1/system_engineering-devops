@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Display unique USERs of running processes with only USER header
-ps -eo user= | sort -u | awk 'BEGIN {print "USER"} {print $1}'
+# Output USER header and unique users padded with spaces to match expected length
+printf "USER   \n"
+ps -eo user= | sort -u | while read user; do printf "%-7s\n" "$user"; done
