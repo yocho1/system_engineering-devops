@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# List all processes with USER, STAT, TIME, COMMAND columns
-ps -eo user,stat,time,comm
+# Display unique USERs of running processes with only USER header
+ps -eo user= | sort -u | awk 'BEGIN {print "USER"} {print $1}'
