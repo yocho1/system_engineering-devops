@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Display only the USER column of all running processes with a USER header
-
+# Lists only the USER column of running processes
 echo "USER"
-ps -eo user= | sort -u | awk '{print $1}'
+ps -eo user= | sort -u
