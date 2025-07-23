@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Display unique users of running processes with USER header only
+# Display unique users of running processes with USER header, only first column
 
-echo "USER"
-ps -eo user= | sort -u | awk '{print $1}'
+ps -eo user= | sort -u | awk 'BEGIN {print "USER"} {print $1}'
