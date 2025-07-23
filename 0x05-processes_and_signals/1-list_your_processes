@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# Display unique users of running processes, with USER header padded with spaces
+# Display unique users of running processes with USER header
 
-printf "USER   \n"
-ps -eo user= | sort -u | while read -r user; do
-    printf "%-7s\n" "$user"
-done
+echo "USER"
+ps -eo user= | sort -u
