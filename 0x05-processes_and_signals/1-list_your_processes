@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Display unique users of running processes with USER header
+# Display unique users of running processes with USER header only
 
 echo "USER"
-ps -eo user= | sort -u
+ps -eo user= | sort -u | sed 's/[[:space:]]*$//'
