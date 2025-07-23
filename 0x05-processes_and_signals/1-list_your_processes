@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-# Display only USER column of all running processes, unique and sorted
-ps -eo user= | sort | uniq | awk 'BEGIN {print "USER"} {print $1}'
+ps -eo user= | sort -u | awk 'BEGIN {print "USER"} {print $1}'
