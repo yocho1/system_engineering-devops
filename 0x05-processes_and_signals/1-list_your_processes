@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# Display all running processes with user info and hierarchy
-ps -eo user,pid,ppid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
+# List all processes with USER, STAT, TIME, COMMAND columns
+ps -eo user,stat,time,comm
