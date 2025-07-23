@@ -2,4 +2,4 @@
 # Display unique users of running processes with USER header only
 
 echo "USER"
-ps -eo user= | sort -u | sed 's/[[:space:]]*$//'
+ps -eo user= | sort -u | awk '{print $1}'
