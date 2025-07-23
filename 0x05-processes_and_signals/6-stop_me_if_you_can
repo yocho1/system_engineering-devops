@@ -1,8 +1,2 @@
 #!/usr/bin/env bash
-# Stops all 4-to_infinity_and_beyond processes without kill or killall silently
-
-for pid in $(pgrep -f 4-to_infinity_and_beyond); do
-  if [ -e /proc/"$pid"/fd/0 ]; then
-    exec 3<>/proc/"$pid"/fd/0 && echo "exit" >&3
-  fi
-done
+PID=$(pgrep -f 4-to_infinity_and_beyond) && echo -e '' > /proc/"$PID"/fd/0
