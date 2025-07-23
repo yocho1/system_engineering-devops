@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# Your Bash script return running processes according to requirements
 ps -eo user= | sort -u | awk 'BEGIN {print "USER"} {print $1}'
